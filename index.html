@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Основные мета-теги для кодировки и адаптивности -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Входные и межкомнатные двери на заказ купить в Подольске</title>
+    <!-- Стили для jQuery UI (добавить перед своими стилями) -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.png" sizes="32x32">
+</head>
+<body>
+   <!-- НАЧАЛО: Модальное окно (popup) для формы "Отправить запрос" -->
+    <div id="popup-form" class="popup">
+        <div class="popup-content">
+            <span class="popup-close">×</span>
+            <h3>Отправить запрос</h3>
+            <form id="ajax-form">
+                <div class="form-group">
+                    <label for="popup-name">Ваше имя</label>
+                    <input type="text" id="popup-name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-phone">Номер телефона</label>
+                    <input type="tel" id="popup-phone" placeholder="Номер телефона" required>
+                </div>
+                <!-- Скрипт 7: Поле с выбором даты (Datepicker) -->
+                <div class="form-group">
+                    <label for="popup-date">Желаемая дата замера</label>
+                    <input type="text" id="popup-date" placeholder="Выберите дату" readonly>
+                </div>
+                <button type="submit" class="btn">Отправить</button>
+                <div class="form-message" style="display: none; margin-top: 15px; color: green;"></div>
+            </form>
+        </div>
+    </div>
+    <!-- КОНЕЦ: Модальное окно -->
+
+    <!-- НАЧАЛО: Шапка сайта (Header) -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <strong>+7 (994) 311-66-36</strong>
+                    <span>Бесплатная консультация</span>
+                </div>
+                <button class="btn btn-small open-popup">Вызвать замерщика</button>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="assets/images/logo.png" alt="Perfect Doors Logo">
+                </a>
+                <nav class="main-nav">
+                    <button class="menu-toggle" aria-label="Открыть меню"><i class="fas fa-bars"></i></button>
+                    <ul>
+                        <li class="has-dropdown"><a href="#">Клиентам <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">О компании</a></li><li><a href="#">Как мы работаем</a></li><li><a href="#">Портфолио</a></li><li><a href="#">Статьи/новости</a></li><li><a href="#">FAQ (вопрос/ответ)</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown"><a href="#">Наши двери <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Входные двери</a></li><li><a href="#">Межкомнатные двери</a></li><li><a href="#">Раздвижные двери</a></li><li><a href="#">Складные двери</a></li><li><a href="#">Специальные двери</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Арки и порталы</a></li><li><a href="#">Распродажа/скидки</a></li><li><a href="#">Каталог</a></li>
+                    </ul>
+                </nav>
+                <form class="search-form"><input type="search" placeholder="Поиск"><button type="submit" aria-label="Поиск"><i class="fas fa-search"></i></button></form>
+            </div>
+        </div>
+    </header>
+    <!-- КОНЕЦ: Шапка сайта -->
+
+    <!-- НАЧАЛО: Основное содержимое страницы -->
+<main>
+    <!-- Секция "Hero" - главный баннер на первом экране -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Входные и <span class="text-accent-blue">межкомнатные двери</span></h1>
+                <h2>
+                    <img src="assets/images/garantia.png" alt="Гарантия" class="icon">
+                    Производство с гарантией <span class="text-accent-blue">10 лет</span>
+                </h2>
+                <p>С возможностью изготовления дверей любого размера в кратчайшие сроки</p>
+                <button class="btn btn-primary open-popup">Подобрать дверь</button>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/kartinka-glavnogo-jekrana.png" alt="Входная дверь">
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок с уникальными преимуществами (Замер, Доставка, Демонтаж) -->
+    <section class="usp-bar">
+        <div class="container">
+            <div class="usp-item" title="Наш специалист приедет в удобное для вас время, произведет точные замеры и поможет с выбором.">
+                <img data-src="assets/images/zamer.png" alt="" class="lazy">
+                <h3>Замер бесплатно</h3>
+            </div>
+            <div class="usp-item" title="Доставим ваши новые двери по Подольску и югу Подмосковья абсолютно бесплатно.">
+                <img data-src="assets/images/dostavka.png" alt="" class="lazy">
+                <h3>Доставка бесплатно</h3>
+            </div>
+            <div class="usp-item" title="Аккуратно и бесплатно демонтируем вашу старую дверь перед установкой новой.">
+                <img data-src="assets/images/demontazh.png" alt="" class="lazy">
+                <h3>Демонтаж бесплатно</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с картой зоны обслуживания -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Работаем по всему югу Подмосковья</h2>
+            <div class="map-container">
+                <img data-src="assets/images/karta-raboti.png" alt="Карта работы компании" class="lazy">
+                <div class="map-point" style="top: 45%; left: 48%;" data-city="Подольск"></div>
+                <div class="map-point" style="top: 65%; left: 52%;" data-city="Чехов"></div>
+                <div class="map-point" style="top: 80%; left: 45%;" data-city="Серпухов"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Секция "Как проходит бесплатный замер" -->
+    <section class="free-measurement">
+        <div class="container">
+            <div class="free-measurement-image">
+                <img data-src="assets/images/free-zamer-dver.png" alt="Замерщик дверей" class="lazy">
+            </div>
+            <div class="free-measurement-text">
+                <h2>Как проходит бесплатный замер?</h2>
+                <p>Специалист замерит двери в удобное для Вас время. Покажет каталоги и посоветует оптимальные материалы.</p>
+                <p><strong>Он определит все технические особенности заказа:</strong></p>
+                <p>Размеры проёмов, материал стен, необходимость дополнительных материалов или комплектующих, сложность предстоящего монтажа.</p>
+                <button class="btn btn-primary open-popup">Вызвать замерщика</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок категорий товаров: "Входные двери" -->
+    <section class="product-categories">
+        <div class="container">
+            <h2 class="section-title-left"><a href="#">Входные двери</a></h2>
+            <div class="category-grid-vhodnie">
+                <div class="category-card">
+                    <a href="#">
+                        <div class="card-text">
+                            <h3>Эконом</h3>
+                            <span class="price">от 8 500 ₽</span>
+                        </div>
+                        <img data-src="assets/images/econom.png" alt="Дверь эконом" class="card-image lazy">
+                    </a>
+                </div>
+                <div class="category-card">
+                    <a href="#">
+                        <div class="card-text">
+                            <h3>Стандарт</h3>
+                            <span class="price">от 15 800 ₽</span>
+                        </div>
+                        <img data-src="assets/images/standart.png" alt="Дверь стандарт" class="card-image lazy">
+                    </a>
+                </div>
+                <div class="category-card">
+                    <a href="#">
+                        <div class="card-text">
+                            <h3>Премиум</h3>
+                            <span class="price">от 24 050 ₽</span>
+                        </div>
+                        <img data-src="assets/images/premium.png" alt="Дверь премиум" class="card-image lazy">
+                    </a>
+                </div>
+                <div class="category-card">
+                    <a href="#">
+                        <div class="card-text">
+                            <h3>Терморазрыв</h3>
+                            <span class="price">от 29 380 ₽</span>
+                        </div>
+                        <img data-src="assets/images/termorazriv.png" alt="Дверь терморазрыв" class="card-image lazy">
+                    </a>
+                </div>
+                <div class="category-card sale-banner">
+                    <a href="#">
+                        <div class="card-text">
+                            <h3>Распродажа</h3>
+                        </div>
+                        <span class="sale-text-bg">SALE</span>
+                        <img data-src="assets/images/sale.png" alt="Дверь по распродаже" class="card-image lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Горизонтальный разделитель -->
+    <hr class="section-divider">
+
+    <!-- Секция "Этапы работ" -->
+    <section class="work-stages">
+        <div class="container">
+            <h2 class="section-title-left">Этапы работ</h2>
+            <div class="stages-timeline">
+                <div class="stage-item"><div class="stage-header"><div class="stage-icon-wrapper"><img data-src="assets/images/call.png" class="stage-icon-bg lazy" alt=""><span class="stage-number">01</span></div><div class="stage-line-point"></div></div><div class="stage-content"><p>Вы обращаетесь к нам за консультацией или для вызова замерщика с каталогом и веером декоров</p><a href="#" class="stage-link open-popup">Вызвать замерщика</a></div></div>
+                <div class="stage-item"><div class="stage-header"><div class="stage-icon-wrapper"><img data-src="assets/images/measure.png" class="stage-icon-bg lazy" alt=""><span class="stage-number">02</span></div><div class="stage-line-point"></div></div><div class="stage-content"><p>После консультации направляем к Вам замерщика</p></div></div>
+                <div class="stage-item"><div class="stage-header"><div class="stage-icon-wrapper"><img data-src="assets/images/chose.png" class="stage-icon-bg lazy" alt=""><span class="stage-number">03</span></div><div class="stage-line-point"></div></div><div class="stage-content"><p>После замера у вас есть возможность подобрать двери по каталогу и вееру декоров</p></div></div>
+                <div class="stage-item"><div class="stage-header"><div class="stage-icon-wrapper"><img data-src="assets/images/document.png" class="stage-icon-bg lazy" alt=""><span class="stage-number">04</span></div><div class="stage-line-point"></div></div><div class="stage-content"><p>Заключение официального договора</p></div></div>
+                <div class="stage-item"><div class="stage-header"><div class="stage-icon-wrapper"><img data-src="assets/images/time.png" class="stage-icon-bg lazy" alt=""><span class="stage-number">05</span></div><div class="stage-line-point"></div></div><div class="stage-content"><p>В течении 3-5 дней монтаж с последующей гарантией на него 1 год</p></div></div>
+                <div class="stage-item">
+                    <div class="stage-header">
+                        <div class="stage-icon-wrapper">
+                            <img data-src="assets/images/good.png" class="stage-icon-bg lazy" alt="">
+                            <span class="stage-number">06</span>
+                        </div>
+                        <div class="stage-line-point"></div>
+                    </div>
+                    <div class="stage-content">
+                        <p>Вы остаётесь полностью довольны, рекомендуете нас знакомым, обращаетесь снова на льготных условиях</p>
+                        <a href="#photo-gallery" class="stage-link smooth-scroll">Смотреть работы</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "О нашей компании в цифрах" -->
+    <section class="company-in-numbers">
+        <div class="container">
+            <h2 class="section-title-left">О нашей компании в цифрах</h2>
+            <div class="numbers-grid">
+                <div class="number-card"><h3>8 лет</h3><p>На протяжении 8 лет мы продаём и устанавливаем двери в Москве и обл. Компания, проверенная временем!</p></div>
+                <div class="number-card"><h3>10 лет</h3><p>Предоставляем 10 ЛЕТ ГАРАНТИИ! Многоступенчатый контроль качества максимально снижает возможность брака!</p></div>
+                <div class="number-card"><h3>1070 клиентов</h3><p>Нашими клиентами стали более 1070 человек! Каждый третий клиент нашей компании по рекомендации!</p></div>
+                <div class="number-card"><h3>3 дня</h3><p>Доставка в течении 3-х дней! Возможность установки в день доставки!</p></div>
+                <div class="number-card"><h3>1 год</h3><p>1 год бесплатного монтажного обслуживания!</p></div>
+                <div class="number-card"><h3>22400 дверей</h3><p>Более 22 400 установленных дверей</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Фотогалерея" со слайдером -->
+    <section class="photo-gallery" id="photo-gallery">
+        <div class="container">
+            <h2>Фотогалерея работ</h2>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-track">
+                       <div class="slide"><img data-src="assets/images/primer1.png" alt="Фото работы 1" class="lazy"></div>
+                       <div class="slide"><img data-src="assets/images/primer2.png" alt="Фото работы 2" class="lazy"></div>
+                       <div class="slide"><img data-src="assets/images/primer3.png" alt="Фото работы 3" class="lazy"></div>
+                       <div class="slide"><img data-src="assets/images/primer4.png" alt="Фото работы 4" class="lazy"></div>
+                       <div class="slide"><img data-src="assets/images/primer2.png" alt="Фото работы 5" class="lazy"></div>
+                       <div class="slide"><img data-src="assets/images/primer3.png" alt="Фото работы 6" class="lazy"></div>
+                    </div>
+               </div>
+                <button class="slider-btn prev-btn" aria-label="Предыдущий слайд"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" aria-label="Следующий слайд"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">Фото работ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Почему именно мы" (Исходный вид) -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Почему именно мы</h2>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <img data-src="assets/images/expert.png" alt="Иконка" class="lazy">
+                    <div>
+                        <h3>Команда экспертов</h3>
+                        <p>Сильнейшая команда сотрудников, которая уже давно стала единым коллективом. Все продавцы-консультанты и замерщики работают ещё со дня основания компании и являются уверенными экспертами в своём деле, они знают совершенно всё о дверях</p>
+                    </div>
+                </div>
+                <div class="why-us-item">
+                    <img data-src="assets/images/3stupeni.png" alt="Иконка" class="lazy">
+                    <div>
+                        <h3>3 ступени контроля качества</h3>
+                        <p>Современное производство. Предпродажное тестирование всех характеристик дверей на ударопрочность, влагостойкость, взломостойкость, шумоподавление, температурные показатели, устойчивость к царапинам</p>
+                    </div>
+                </div>
+                <div class="why-us-item">
+                    <img data-src="assets/images/unusual.png" alt="Иконка" class="lazy">
+                    <div>
+                        <h3>Нестандартные проекты</h3>
+                        <p>Речь о выполнения сопутствующих профессиональному монтажу задач. К примеру, когда речь идёт о: расширения проёма, наращивание, облагораживание проёма — наша команда всегда справляется с поставленными перед ними задачами</p>
+                    </div>
+                </div>
+                 <div class="why-us-item">
+                    <img data-src="assets/images/demontazh.png" alt="Иконка" class="lazy">
+                    <div>
+                        <h3>Профессиональный монтаж</h3>
+                        <p>Самое большое внимание в работе мы уделяем качеству монтажа. Все наши монтажники работают профессиональным инструментом. Расходуется максимум пены для предотвращения любых сквозняков</p>
+                    </div>
+                </div>
+                <div class="why-us-item">
+                    <img data-src="assets/images/rabotaem.png" alt="Иконка" class="lazy">
+                    <div>
+                        <h3>Работаем с 2012 года</h3>
+                        <p>Компания основана 05.04.2012 За время существования компании мы провели огромный объём работ. Многолетний опыт и стремление быть лучшими в своём деле помогли нам организовать достойный сервис</p>
+                    </div>
+                </div>
+                <div class="why-us-item">
+                    <img data-src="assets/images/fixprice.png" alt="Иконка" class="lazy">
+                    <div>
+                        <h3>Фиксированные цены</h3>
+                        <p>Говоря о ценах - в них нет и не может быть лишних надбавок. Заказав двери в компании Perfect Doors, Вам никогда не придется оплачивать какие-либо дополнительные работ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Почему именно мы" (Виджет-аккордеон) -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Почему именно мы</h2>
+            <div id="accordion">
+                <h3>
+                    <img data-src="assets/images/expert.png" alt="Иконка" class="lazy">
+                    Команда экспертов
+                </h3>
+                <div>
+                    <p>Сильнейшая команда сотрудников, которая уже давно стала единым коллективом. Все продавцы-консультанты и замерщики работают ещё со дня основания компании и являются уверенными экспертами в своём деле, они знают совершенно всё о дверях</p>
+                </div>
+
+                <h3>
+                    <img data-src="assets/images/3stupeni.png" alt="Иконка" class="lazy">
+                    3 ступени контроля качества
+                </h3>
+                <div>
+                     <p>Современное производство. Предпродажное тестирование всех характеристик дверей на ударопрочность, влагостойкость, взломостойкость, шумоподавление, температурные показатели, устойчивость к царапинам</p>
+                </div>
+
+                <h3>
+                    <img data-src="assets/images/unusual.png" alt="Иконка" class="lazy">
+                    Нестандартные проекты
+                </h3>
+                <div>
+                    <p>Речь о выполнения сопутствующих профессиональному монтажу задач. К примеру, когда речь идёт о: расширения проёма, наращивание, облагораживание проёма — наша команда всегда справляется с поставленными перед ними задачами</p>
+                </div>
+
+                 <h3>
+                    <img data-src="assets/images/demontazh.png" alt="Иконка" class="lazy">
+                    Профессиональный монтаж
+                 </h3>
+                <div>
+                    <p>Самое большое внимание в работе мы уделяем качеству монтажа. Все наши монтажники работают профессиональным инструментом. Расходуется максимум пены для предотвращения любых сквозняков</p>
+                </div>
+
+                <h3>
+                    <img data-src="assets/images/rabotaem.png" alt="Иконка" class="lazy">
+                    Работаем с 2012 года
+                </h3>
+                <div>
+                    <p>Компания основана 05.04.2012 За время существования компании мы провели огромный объём работ. Многолетний опыт и стремление быть лучшими в своём деле помогли нам организовать достойный сервис</p>
+                </div>
+                
+                <h3>
+                    <img data-src="assets/images/fixprice.png" alt="Иконка" class="lazy">
+                    Фиксированные цены
+                </h3>
+                <div>
+                    <p>Говоря о ценах - в них нет и не может быть лишних надбавок. Заказав двери в компании Perfect Doors, Вам никогда не придется оплачивать какие-либо дополнительные работ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция CTA (Call-To-Action) "Бесплатный выезд" -->
+    <section class="cta-banner">
+        <div class="cta-background">
+            <div class="container cta-container">
+                <div class="cta-content">
+                    <h3>Бесплатный выезд <br>специалиста на замер</h3>
+                    <p>Оставьте заявку и к Вам приедет специалист с каталогами и образцами сегодня</p>
+                    <form class="cta-form">
+                        <input type="tel" placeholder="+7 (999) 666-66-66" required>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+                <div class="cta-image-wrapper">
+                    <img data-src="assets/images/freezamer.png" alt="Дверь для замера" class="cta-door-image lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Секция с сертификатами -->
+    <section class="certificates">
+        <div class="container">
+            <h2>Сертификаты</h2>
+            <div class="certificates-grid">
+                <a href="assets/images/certificate1.png" target="_blank"><img data-src="assets/images/certificate1.png" alt="Сертификат 1" class="lazy zoom-image"></a>
+                <a href="assets/images/certificate2.png" target="_blank"><img data-src="assets/images/certificate2.png" alt="Сертификат 2" class="lazy zoom-image"></a>
+                <a href="assets/images/certificate3.png" target="_blank"><img data-src="assets/images/certificate3.png" alt="Сертификат 3" class="lazy zoom-image"></a>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- КОНЕЦ: Основное содержимое страницы -->
+
+    <!-- НАЧАЛО: Подвал сайта (Footer) -->
+    <footer>
+        <div class="container footer-main">
+            <div class="footer-column">
+                <h3>Клиентам</h3>
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Как мы работаем</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#">Характеристика дверей</a></li>
+                    <li><a href="#">Стоимость монтажных работ</a></li>
+                    <li><a href="#">Статьи/новости</a></li>
+                    <li><a href="#">FAQ (вопрос/ответ)</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Наши двери</h3>
+                <ul>
+                    <li><a href="#">Входные</a></li>
+                    <li><a href="#">Межкомнатные</a></li>
+                    <li><a href="#">Раздвижные</a></li>
+                    <li><a href="#">Складные</a></li>
+                    <li><a href="#">Специальные</a></li>
+                </ul>
+            </div>
+             <div class="footer-column">
+                <h3><a href="#">Арки и порталы</a></h3>
+                <h3><a href="#">Распродажи/скидки</a></h3>
+                <h3><a href="#">Каталог</a></h3>
+            </div>
+            <div class="footer-column footer-contacts">
+                <a href="#"><img src="assets/images/logo-footer.png" alt="Logo" class="footer-logo"></a>
+                <p>Бесплатный звонок</p>
+                <a href="tel:+74993703136" class="phone-link">+7(909) 999-99-99</a>
+                <p>Наша почта</p>
+                <a href="mailto:dveriperfect@gmail.com" class="email-link">dveriperfect@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2020 - Perfect Doors</p>
+            </div>
+        </div>
+    </footer>
+    <!-- КОНЕЦ: Подвал сайта -->
+    
+    <!-- Скрипт 7: Кнопка "Наверх" -->
+    <a href="#" id="back-to-top" title="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Скрипт 13: Баннер о Cookie -->
+    <div id="cookie-banner">
+        <p>Мы используем файлы cookie для улучшения вашего опыта. Продолжая посещать сайт, вы соглашаетесь на использование нами файлов cookie.</p>
+        <button id="cookie-accept" class="btn btn-small">Принять</button>
+    </div>
+
+    <!-- jQuery и jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    
+    <!-- Подключение JavaScript файла для интерактивности -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
